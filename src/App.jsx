@@ -25,8 +25,11 @@ function App() {
   return(
     <div>
       <h1>API practice posts</h1>
-      {posts.map((item) => (
-        <p key ={item.id}>{item.title}</p>
+      {posts.map((item,index) => (
+        <div key = {item.id}>
+          <p>{index + 1}{item.title}</p>
+          <p>{item.body}</p>
+        </div>
       ))}
     </div>
   )
